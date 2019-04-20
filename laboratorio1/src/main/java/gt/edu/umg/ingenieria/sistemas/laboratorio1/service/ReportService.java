@@ -129,7 +129,7 @@ public class ReportService {
         if (ficheros.isEmpty() == false)
             cont = Integer.parseInt(p)+1;
         else
-            cont = 0+1;
+            cont = 1;
 
   
         String ruta2 = "/var/www/Clientes_"+cont+".html";
