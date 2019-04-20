@@ -6,12 +6,7 @@ import org.springframework.stereotype.Service;
 import gt.edu.umg.ingenieria.sistemas.laboratorio1.model.Client;
 import gt.edu.umg.ingenieria.sistemas.laboratorio1.model.ReglasException;
 import java.util.List;
-import jdk.nashorn.internal.ir.BreakNode;
 
-/**
- *
- * @author Josué Barillas (jbarillas)
- */
 @Service
 public class ClientService {
     

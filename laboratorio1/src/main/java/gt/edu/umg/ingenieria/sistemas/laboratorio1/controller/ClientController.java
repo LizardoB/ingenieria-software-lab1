@@ -14,17 +14,12 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 
-/**
- *
- * @author Josué Barillas (jbarillas)
- */
 
 @RestController
 @RequestMapping("/clientes")
 public class ClientController {
 
     @Autowired
-    //private ReportService reportService;
     private ClientService clientService;
     
     
@@ -43,7 +38,7 @@ public class ClientController {
         return this.clientService.getClientByNit(nit);
     }
     
-    @PutMapping("/editarCliente/{id}")//PathVariable=id
+    @PutMapping("/editarCliente/{id}")
     public Client updateClient(@PathVariable(required = true) int id, @RequestBody(required = true) Client clientToUpdate){
         return this.clientService.updateClient(clientToUpdate);
     }    
