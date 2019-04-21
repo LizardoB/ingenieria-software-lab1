@@ -46,6 +46,7 @@ public class ReportService {
         "        tr:nth-child(even) {\n" +
         "          background-color: #dddddd;\n" +
         "        }\n" +
+        " tr:hover {background-color: #f5f5f5;}\n"+
         "        </style>\n" +
         "        </head>\n" +
         "        <body>\n" +
