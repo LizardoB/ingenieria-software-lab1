@@ -106,7 +106,6 @@ public class ReportService {
 
             int extractInt(String s) {
                 String num = s.replaceAll("\\D", "");
-                // return 0 if no digits found
                 return num.isEmpty() ? 0 : Integer.parseInt(num);
             }
         });
@@ -130,7 +129,7 @@ public class ReportService {
         if (ficheros.isEmpty() == false)
             cont = Integer.parseInt(p)+1;
         else
-            cont = 0+1;
+            cont = 1;
 
   
         String ruta2 = "/var/www/Clientes_"+cont+".html";
@@ -142,35 +141,7 @@ public class ReportService {
 
         
         bw.close();
-        
-            
-        
-        /*        
-        if(archivo.exists()) {
 
-        String palabra = archivo.getName();
-        char[] caracteres = palabra.toCharArray();
-        String p = "";
-        int cont = 0;
-
-        for (int i = 0; i < caracteres.length; i++) {
-            if(Character.isDigit(caracteres[i])){
-                p += caracteres[i];
-            }
-        }
-        cont = Integer.parseInt(p)+1;
-        String ruta2 = "/home/lizardo/Escritorio/Clientes_"+cont+".html";
-        File archivo2 = new File(ruta2);
-
-        bw = new BufferedWriter(new FileWriter(archivo2));
-        bw.write(c1.toString());
-
-        } else {
-            bw = new BufferedWriter(new FileWriter(archivo));
-            bw.write(c1.toString());
-        }
-        bw.close();
-        */
         result = "El reporte /var/www/Clientes_"+cont+".html ha sido generado.";
         return result;
     }
